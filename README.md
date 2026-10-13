@@ -1,2 +1,4 @@
-# Python_Teszteles
-A tesztelős feladataim
+# Python Tesztelés
+Ebben a repoban a tesztelős feladataimat lehet megtalálni
+
+Korom Richárd tanar úr órájának speciálba
