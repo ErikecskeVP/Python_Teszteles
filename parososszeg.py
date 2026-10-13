@@ -15,4 +15,9 @@ class TestParososszeg(unittest.TestCase):
     def test_nulla(self):
         ertek=intervallum(0,0)
         self.assertEqual(ertek, f'A(z) [{0}; {0}] intervallumba eso paros szamok osszege: {0}')
+
+    def test_neg_egy(self):
+        ertek=intervallum(-2, 10)
+        self.assertLess(ertek, f'A(z) [{-2}; {10}] intervallumba eso paros szamok osszege: {30}')
+
 unittest.main()
