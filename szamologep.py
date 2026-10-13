@@ -10,16 +10,16 @@ def szamologep(num1, num2, mj):
 
     else:
         if mj=="+":
-            return num1+num2
+            return f'Az eredmeny: {num1+num2}'
         elif mj=="-":
-            return num1-num2
+            return f'Az eredmeny: {num1-num2}'
         elif mj=="*":
-            return num1*num2
+            return f'Az eredmeny: {num1*num2}'
         else:
             if num2==0:
                 return 'Ejnye, nullaval nem osztunk!'
             else:
-                return num1/num2
+                return f'Az eredmeny: {num1/num2}'
 
 print(szamologep(szam1, szam2, muvelet))
 
@@ -30,7 +30,7 @@ class TestSzamologep(unittest.TestCase):
 
     def test_negativ_x_negativ(self):
         ertek=szamologep(-5, -6, "*")
-        self.assertGreater(ertek, 0)
+        self.assertGreater(ertek, f'Az eredmeny: {0}')
 
     def test_hibas_jel(self):
         ertek=szamologep(1,2,"!")
@@ -38,11 +38,11 @@ class TestSzamologep(unittest.TestCase):
 
     def test_poz_bol_neg(self):
         ertek=szamologep(1202, (-21), "-")
-        self.assertEqual(ertek, 1202+abs(-21))
+        self.assertEqual(ertek, f'Az eredmeny: {1202+abs(-21)}')
 
     def test_poz_x_negativ(self):
         ertek=szamologep(121312, -21211, "*")
-        self.assertLess(ertek, 0)
+        self.assertLess(ertek, f'Az eredmeny: {0}')
 
     
 
